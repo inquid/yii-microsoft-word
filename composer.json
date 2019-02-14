@@ -1,0 +1,22 @@
+{
+    "name": "inquid/yii-microsoft-word",
+    "description": "Create documents using templates and Microsoft® Word",
+    "type": "yii2-extension",
+    "keywords": ["yii","extension","yii2","yii3","Microsoft","Word","Templates"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "INQUID SAS DE CV",
+            "email": "contact@inquid.co"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "phpoffice/phpword": "v0.16.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "inquid\\word\\": "src"
+        }
+    }
+}
