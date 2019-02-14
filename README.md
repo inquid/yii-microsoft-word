@@ -28,4 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \inquid\word\AutoloadExample::widget(); ?>```
+    $executer = new \inquid\word\TemplateExecuter();
+    $template = $executer->execute([['name' , 'Luis Armando González'], ['email' , 'contact@inquid.co']]);
+    $executer->saveDocument($template, 'Default.docx');
+```
