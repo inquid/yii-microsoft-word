@@ -34,8 +34,7 @@ class TemplateExecuter extends Component
             }
             $templateProcessor->setValue($item[0],$item[1]);
         }
-        $templateProcessor->setValue('Name', 'John Doe');
-        $templateProcessor->setValue(array('City', 'Street'), array('Detroit', '12th Street'));
+        return $templateProcessor;
     }
 
     /**
@@ -46,7 +45,7 @@ class TemplateExecuter extends Component
     public function saveDocument($templateProcessor, $documentNamme)
     {
         if ($this->saveFolder == null) {
-            $this->saveFolder = \Yii::getAlias('@web/documents');
+            $this->saveFolder = \Yii::getAlias('files');
         }
         return \Yii::getAlias($templateProcessor->saveAs("{$this->saveFolder}/{$documentNamme}"));
     }
